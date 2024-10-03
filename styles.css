@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000000;
+    /* opacity: .7; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 4%;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0rem 1rem;
+}
+
+hr{
+    display: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: rgb(160, 157, 157);
+}
+
+.nav-links button {
+    height: 40px;
+    width: 100px;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    background: #6447e9;
+    border-radius: 5px;
+    border: solid 0px transparent;
+    transition: border-width 0.4s ease, background 0.4s ease; 
+}
+
+.nav-links button:hover {
+    background: #421ee1;
+    border-width: 1px; 
+    border-color: #f4f4f4; 
+}
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+}
+
+.menu-toggle:hover{
+    .bar{
+    background: #9c8aee;
+}
+}
+
+.logo{
+    color: #fff;
+    font-size: 2x-large;
+    margin-left: 5%;
+}
+
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+
+
+.bar2 {
+    height: 3px;
+    width: 20px;
+    background: white;
+    margin: 3px 0;
+    border-radius: 3px;
+    right: 0;
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    background-image: url('banner1.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.heading{
+    background-color: #fff;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 100px;
+    opacity: .8;
+    margin-top: 15%;
+    border-radius: 30px;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+    padding: 2%;
+    opacity: 1;
+    color: #000;
+    font-weight: 600;
+    font-size: 3x-large;
+    
+}
+.para {
+ margin-top: 10%;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    /* top: 800px; */
+    margin-left: 30%;
+    margin-right: 10%;
+    text-align: right;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    gap: 10px;
+
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    
+}
+
+.card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 20px 0 rgba(34, 35, 38, 0.18);
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 1rem; */
+}
+
+
+.card img {
+    max-width: 60%;
+    /* align-items: center; */
+    /* margin-top: 50px; */
+    
+}
+
+.card h2{
+    /* margin: 10px; */
+    
+}
+
+.card p{
+    font-size: small;
+    color: #7f7e7e;
+}
+
+@media (max-width: 768px) {
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #000000;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        gap: 5px;
+        
+
+        
+        /* transition: max-height 1s linear 1s; */
+    }
+    .nav-links li {
+        margin: 5px;
+        align-items: flex-end;
+
+        /* opacity: .9; */
+    }
+
+    .nav-links button{
+        margin-bottom: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        max-height: 500px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    hr{
+        width: 90%;
+        display: block;
+        opacity: .4;
+    }
+
+    .heading h1 {
+        font-size: 2.5rem;
+        padding: 2%;
+        opacity: 1;
+        color: #000;
+        font-weight:600;
+        font-size: 2x-large;
+        
+    }
+
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        max-width: 40%;
+        align-items: center;
+        /* margin-top: 50px; */
+        
+    }
+}
