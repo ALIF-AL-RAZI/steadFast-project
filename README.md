@@ -1,7 +1,22 @@
-ecommerce filter deployment link --> https://stead-fast-project-ecommerce-filter.vercel.app/
+## All Deployment:
+```
+1. no framework deployment link -->> https://stead-fast-project.vercel.app/
+2. react/nextjs deployment link -->> https://stead-fast-project-react.vercel.app/
+3. ecommerce filter deployment link -->> https://stead-fast-project-ecommerce-filter.vercel.app/
+```
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+
+Download any project(select branch)
+```
+git clone -b <branch_name> <remote_repo_link>
+```
+
+Download Packeges
+```
+npm install
+```
 
 First, run the development server:
 
